@@ -56,4 +56,17 @@ The system is designed to be **modular, scalable, and cloud-native**, making it 
 ---
 
 ## 📂 Project Structure
-
+├── backend/
+│ ├── index.js
+│ ├── db.js
+│ ├── routes/
+│ └── package.json
+│
+├── frontend/
+│ ├── index.html
+│ ├── style.css
+│ └── app.js
+│
+├── screenshots/
+├── README.md
+└── .gitignore
