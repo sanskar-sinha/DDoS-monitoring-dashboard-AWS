@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DDoS Monitoring Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>DDoS Monitoring Dashboard</h1>
+  </header>
+
+  <main>
+    <!-- Top IPs -->
+    <section class="card">
+      <h2>Top Suspected IPs</h2>
+      <table id="top-ips-table">
+        <thead>
+          <tr>
+            <th>IP Address</th>
+            <th>Total Requests</th>
+            <th>Suspected Hits</th>
+          </tr>
+        </thead>
+        <tbody id="top-ips-body">
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Blocked IPs -->
+    <section class="card">
+      <h2>Blocked IPs</h2>
+      <table id="blocked-ips-table">
+        <thead>
+          <tr>
+            <th>IP Address</th>
+            <th>Reason</th>
+            <th>Blocked At</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="blocked-ips-body">
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+
+      <form id="block-ip-form" class="inline-form">
+        <h3>Block New IP</h3>
+        <input
+          type="text"
+          id="block-ip-input"
+          placeholder="IP address"
+          required
+        />
+        <input
+          type="text"
+          id="block-reason-input"
+          placeholder="Reason (optional)"
+        />
+        <button type="submit">Block</button>
+      </form>
+    </section>
+
+    <!-- Logs -->
+    <section class="card">
+      <h2>Recent Logs</h2>
+      <div class="toolbar">
+        <label>
+          Limit:
+          <input type="number" id="logs-limit-input" value="50" min="10" max="500" />
+        </label>
+        <button id="reload-btn">Reload</button>
+      </div>
+      <table id="logs-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>IP</th>
+            <th>Endpoint</th>
+            <th>Method</th>
+            <th>Requests Count</th>
+            <th>Suspected?</th>
+          </tr>
+        </thead>
+        <tbody id="logs-body">
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <small>Simple DDoS Monitoring Dashboard – HTML, CSS, JavaScript</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

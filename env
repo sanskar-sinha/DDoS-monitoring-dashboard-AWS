@@ -1,0 +1,5 @@
+DB_HOST=http://your-ec2-public-ip:4000/api
+DB_USER=admin
+DB_PASSWORD=yourpassword
+DB_NAME=ddos_monitoring
+PORT=4000
